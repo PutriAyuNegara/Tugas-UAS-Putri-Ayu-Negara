@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pengaturan Gambar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container border border-primary p-4">
+        <h1 class="mt-4">Pengaturan Gambar</h1>
+        <form method="POST" action="/settings" class="mt-4">
+            <input type="hidden" name="image_path" value="{{ image_path }}">
+
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <input type="number" name="size" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="position">Position:</label>
+                <select name="position" class="form-control">
+                    <option value="top_left">Top Left</option>
+                    <option value="top_center">Top Center</option>
+                    <option value="top_right">Top Right</option>
+                    <option value="center_left">Center Left</option>
+                    <option value="center">Center</option>
+                    <option value="center_right">Center Right</option>
+                    <option value="bottom_left">Bottom Left</option>
+                    <option value="bottom_center">Bottom Center</option>
+                    <option value="bottom_right">Bottom Right</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Ubah Gambar" class="btn btn-primary">
+        </form>
+
+        {% if image_path %}
+        <h2 class="mt-4">Gambar yang Diunggah:</h2>
+        <img src="{{ image_path }}" alt="Uploaded Image" class="mt-2">
+        {% endif %}
+
+    </div>
+</body>
+
+</html>

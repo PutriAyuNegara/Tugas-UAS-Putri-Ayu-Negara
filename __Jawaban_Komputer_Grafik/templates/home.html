@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Upload dan Ubah Gambar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container border border-primary p-4 mt-5">
+        <h1 class="mt-4">Upload dan Ubah Gambar</h1>
+        <form method="POST" action="/upload" class="mt-4 border border-dark p-4" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="image">Pilih Gambar:</label>
+                <input type="file" name="image" class="form-control-file" accept="image/*" required>
+            </div>
+            <input type="submit" value="Upload Gambar" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+
+</html>
